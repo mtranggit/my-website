@@ -42,7 +42,7 @@ gulp.task('clean', function () {
         .pipe(rimraf());
 });
 
-gulp.task('watch', ['clean', 'browserSync', 'css', 'copy', 'images'], function () {
+gulp.task('watch', ['browserSync', 'css', 'copy', 'images'], function () {
     gulp.watch('src/sass/**/*.scss', ['css']);
     gulp.watch('src/**/*.+(html|js)', ['copy']);
 });
